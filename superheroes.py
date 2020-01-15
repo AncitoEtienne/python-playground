@@ -27,10 +27,10 @@ with open('superheroes.csv', 'w') as f:
         name = member['name']
         age = member["age"]
         secretIdentity = member["secretIdentity"]
-        powers = member['powers']
-        row = [name, age, secretIdentity, powers, squadName, homeTown, formed, secretBase, active]
-        writer.writerow(row)
-    
+        powers = member ['powers']
+        for power in powers:
+            row = [name, age, secretIdentity, powers, squadName, homeTown, formed, secretBase, active]
+            writer.writerow(row)
     
 #Prints those powers to the terminal
 
